@@ -16,22 +16,22 @@ const Stack=createStackNavigator()
   >
     <Stack.Screen
     name='Home'
-    Component={HomeScreen}
+    component={HomeScreen}
 
     />
     <Stack.Screen
     name='SpaceCrafts'
-    Component={SpaceCraftsScreen}
+    component={SpaceCraftsScreen}
     
     />
     <Stack.Screen
     name='StarMap'
-    Component={StarMapScreen}
+    component={StarMapScreen}
     
     />
     <Stack.Screen
     name='DialyPic'
-    Component={DailyPicScreen}
+    component={DailyPicScreen}
     
     />
 
