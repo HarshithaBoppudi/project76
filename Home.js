@@ -11,7 +11,7 @@ render(){
 
     <Text style={{fontSize:30,fontWeight:'bold',color:'white',justifyContent:'center',alignItems:'center',alignSelf:'center'}}>
       Stellar App</Text>
-
+<View style={{flex:1,justifyContent:'center'}}>
     <TouchableOpacity style={styles.button} 
     onPress={()=>{this.props.navigation.navigate('DialyPic')}}>
    
@@ -23,7 +23,8 @@ render(){
         <Text style={styles.bgDigit}>1</Text>
         <Image source={require('../assets/camera.jpg')} style={styles.iconImg}/>
     </TouchableOpacity>
-
+    </View>
+    <View style={{flex:1,justifyContent:'center'}}>
 
     <TouchableOpacity style={styles.button}
      onPress={()=>{this.props.navigation.navigate('SpaceCrafts')}}
@@ -36,7 +37,8 @@ render(){
         <Text style={styles.bgDigit}>2</Text>
         <Image source={require('../assets/rocket.jpeg')} style={styles.iconImg}/>
     </TouchableOpacity>
-
+    </View>
+    <View style={{flex:1,justifyContent:'center'}}>
 
     <TouchableOpacity style={styles.button}
      onPress={()=>{this.props.navigation.navigate('StarMap')}}
@@ -49,7 +51,8 @@ render(){
         <Text style={styles.bgDigit}>3</Text>
         <Image source={require('../assets/star.png')} style={styles.iconImg}/>
     </TouchableOpacity>
-    <Image source={require('../assets/rocket2.jpg')} style={{height:600,width:500,marginLeft:750,marginTop:-550}}/>
+    </View>
+    
     </ImageBackground>
     </View>
   )
@@ -58,7 +61,7 @@ render(){
 }
 const styles=StyleSheet.create({
   areaView:{
-    marginTop:Platform.OS==='android'?statusbar.currentHeight:0
+    marginTop:Platform.OS==='android'?StatusBar.currentHeight:0
   },
   button:{
     height:150,
