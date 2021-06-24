@@ -5,13 +5,14 @@ import { View, StyleSheet, Button,TextInput,Text,TouchableOpacity,StatusBar,Safe
 export default class HomeScreen extends React.Component {
 render(){
   return(
-    <View>
+    <View style={{flex:1}}>
 <SafeAreaView style={styles.areaView}/>
         <ImageBackground source={require('../assets/images.jpg')} style={styles.backgroundImage}>
-
+           <View style={{flex:0.5,justifyContent:'center',alignItems:'center'}}>
     <Text style={{fontSize:30,fontWeight:'bold',color:'white',justifyContent:'center',alignItems:'center',alignSelf:'center'}}>
       Stellar App</Text>
-<View style={{flex:1,justifyContent:'center'}}>
+      </View>
+<View style={{flex:0.7,justifyContent:'center'}}>
     <TouchableOpacity style={styles.button} 
     onPress={()=>{this.props.navigation.navigate('DialyPic')}}>
    

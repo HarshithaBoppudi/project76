@@ -1,13 +1,13 @@
 import * as React from 'react';
-import { View, StyleSheet, Button,TextInput,Text,TouchableOpacity,Image } from 'react-native';
+import { View, StyleSheet, Button,TextInput,Text,TouchableOpacity,Image,Platform,StatusBar,SafeAreaView } from 'react-native';
 import {WebView} from 'react-native-webview'
 import {Header,Icon} from 'react-native-elements';
 export default class StarMapScreen extends React.Component {
   constructor(){
       super()
       this.state={
-        latitude:'12.34567',
-        longitude:'21.05738'
+        latitude:'',
+        longitude:''
       }
   }
  
@@ -24,7 +24,8 @@ render(){
   return(
     
     
-    <View>
+    <View style={{ flex: 1, backgroundColor: "#1a0023" }}>
+      <SafeAreaView style={{marginTop:Platform.OS==='android'?StatusBar.currentHeight:0}} />.
        <Header
  
   leftComponent={<Icon name='arrow-left' type='feather' onPress={()=>{
@@ -32,10 +33,12 @@ render(){
   }}/>}
   
 />
+<Text style={{fontSize:35,fontWeight:"bold", color:"white", 
+justifyContent:"center",alignContent:"center"}}>Star Map</Text>
   
    <View>
    <TextInput
-   style={{height:40,borderColor:'grey',borderWidth:1}}
+   style={{height:40,borderColor:'grey',borderWidth:1,color:"white" }}
    placeholder='enter your latitude'
    placeholderTextColor='#ffff#000000'
    onChangeText={(text)=>{
@@ -47,7 +50,7 @@ render(){
    />
 
 <TextInput
-   style={{height:40,borderColor:'grey',borderWidth:1}}
+   style={{height:40,borderColor:'grey',borderWidth:1,color:"white" }}
    placeholder='enter your longitude'
    placeholderTextColor='#ffff#000000'
    onChangeText={(text)=>{
