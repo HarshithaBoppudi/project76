@@ -25,7 +25,7 @@ render(){
     
     
     <View style={{ flex: 1, backgroundColor: "#1a0023" }}>
-      <SafeAreaView style={{marginTop:Platform.OS==='android'?StatusBar.currentHeight:0}} />.
+      <SafeAreaView style={{marginTop:Platform.OS==='android'?StatusBar.currentHeight:0}} />
        <Header
  
   leftComponent={<Icon name='arrow-left' type='feather' onPress={()=>{
