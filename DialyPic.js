@@ -27,9 +27,10 @@ export default class MeteorsScreen extends React.Component {
     this.getAPOD()
   }
 
-  renderItem=({item})=>{
+  render(){
 return(
   <View style={styles.container}>
+    <SafeAreaView style={styles.droidsafearea}/>
     <SafeAreaView style={styles.droidsafearea}/>
     <ImageBackground source={require('../assets/img.jpg')} style={styles.backgroundImg}>
   <Text style={styles.routeText}>Astronomy picture of the day</Text>
@@ -46,26 +47,11 @@ return(
 
   </View>
 )
+  }
 
-  }
-  keyExtractor=(item,index)=>{
-    index.toString()
-  }
   
-  render(){
-   let apod=this.state.apod
-  return(
-    <View style={{flex:1}}>
-      <SafeAreaView style={styles.droidsafearea}/>
-      <FlatList
-      keyExtractor={this.keyExtractor}
-      data={apod}
-      renderItem={this.renderItem}  
-      horizontal={true}
-      />
-    </View>
-  )
-  }
+  
+ 
 
 
   
@@ -108,6 +94,7 @@ return(
     explanationText:{
       fontSize:15,
       justifyContent:'center',
-      alignItems:'center'
+      alignItems:'center',
+      color:'white'
     }
   })
