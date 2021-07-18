@@ -38,7 +38,7 @@ constructor(){
              <Text style={{fontSize:20,fontWeight:'bold'}}>{item.name}</Text>
              <Text style={{color:'#696969'}}>{item.agency.name}</Text> 
              <Text>DESCRIPTION</Text>
-             <Text style={{color:'#A9A9A9',marginLeft:10,marginRight:10}}>{item.agency.drscription}</Text>  
+             <Text style={{color:'#A9A9A9',marginLeft:10,marginRight:10}}>{item.agency.description}</Text>  
              
           </View>
         )
